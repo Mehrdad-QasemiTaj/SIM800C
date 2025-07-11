@@ -45,7 +45,6 @@ This is a custom development board for the SIM800C GSM module. It is designed fo
 | GND      | Ground |
 
 
-
 ## Notes
 
 ![SIM800C](Images/SIM800DevBoard-6.jpg)
@@ -59,6 +58,16 @@ uRX -> Microcontroller Receive pin
 uTX -> Microcontroller Transmit pin
 cRX -> CH340n Receive pin
 cTX -> CH340n Transmit pin
+```
+- The MCURX and MCUTX pins must be connected exactly to the RX and TX pins of the microcontroller and not MCURX to TX and MCUTX to RX.
+```
+❌
+MCUTX pin --- Microcontroller RX pin
+MCURX pin --- Microcontroller TX pin
+
+✅
+MCUTX pin --- Microcontroller TX pin
+MCURX pin --- Microcontroller RX pin
 ```
 
 ## License
